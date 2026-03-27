@@ -32,6 +32,8 @@ Connect the RS-485 adapter to the H100:
 
 > Keep the RS-485 cable away from power wiring to avoid noise interference.
 
+Plug the USB to RS485 adapter into your computer.
+
 ---
 
 ## 3. H100 VFD Parameter Settings
@@ -46,7 +48,6 @@ Access the VFD keypad and configure these parameters:
 | **F164**  | Modbus baud rate     | `1` (9600 bps recommended)      |
 | **F165**  | Data format          | `3` (8N1 for RTU)               |
 
-> After changing parameters, power-cycle the VFD to ensure they take effect.
 
 ---
 
@@ -61,11 +62,15 @@ Access the VFD keypad and configure these parameters:
 
 ### 4.2 Create a Connection
 
-1. In the Modbus master plugin window, click **"Add Connection"**
-2. Click `Connection_0` in the tree view to select it
-3. Click the **"Connection settings"** tab
-4. Select **"Serial RTU"** as the connection type
-5. Configure the serial parameters:
+1. Open UCCNC and go to **Settings**
+2. Click **"Configure plugins"**
+3. Click the **Show** button for the Modbus master plugin
+4. In the Modbus master plugin window, click **"Add Connection"**
+5. Click `00` in the tree view to select it
+6. Click the **"Connection settings"** tab
+7. Enter "VFD" in the description field
+8. Select **"Serial RTU"** as the connection type
+9. Configure the serial parameters:
 
 | Field             | Value                       |
 |-------------------|-----------------------------|
@@ -79,7 +84,11 @@ Access the VFD keypad and configure these parameters:
 | Loop interval(ms) | `100`                       |
 | RS485 mode        | ☑ **Checked**               |
 
+The COM port you select must be the COM port that the USB to RS485 adapter is connected to.
+
 > Don't forget to check the RS485 checkbox — it's easy to miss.
+
+
 
 ### 4.3 Add Functions
 
