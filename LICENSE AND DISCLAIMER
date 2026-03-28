@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+⚠️ WARNING & DISCLAIMER
+The information, designs, code, and instructions in this repository are provided for educational and informational purposes only. Building a CNC machine involves working with high-voltage electronics, high-speed rotating parts, and powerful motors that can cause serious injury, property damage, or death if handled improperly.
+By using any content from this repository, you acknowledge that:
+
+You assume full responsibility for your own safety and the safety of others.
+The author(s) of this repository are not liable for any injury, damage, or loss resulting from the use or misuse of this information.
+This repository makes no guarantees regarding the accuracy, completeness, or fitness of any design or instruction for any particular purpose.
+
+Always follow local electrical codes, safety regulations, and best practices. If you are unsure about any step, consult a qualified professional before proceeding.
