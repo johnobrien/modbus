@@ -16,10 +16,15 @@ To implement modbus for a H100 VFD with UCCNC, you will need to configure the VF
 This guide was written using the following version/models/hardware:
 
 VFD Model: [H100-2.2S2-1B](/H100_VFD_Manual.pdf)
+
 UCCNC Version: [1.2115](/UCCNC_usersmanual.pdf)
+
 USB to RS485 Converter: [Waveshare SKU 17286](https://www.waveshare.com/wiki/USB_TO_RS485)
+
 Some wires
+
 a 5V relay that has both NC, NO and a low level trigger
+
 a 1N4007 diode
 
 ## 2. Wiring
