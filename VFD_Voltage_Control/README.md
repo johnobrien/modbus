@@ -29,6 +29,10 @@ VFD Model: [H100-2.2S2-1B](/H100_VFD_Manual.pdf)
 
 UCCNC Version: [1.2115](/UCCNC_usersmanual.pdf)
 
+UC300ETH with 5 LPT BOB
+
+G540 Drive
+
 Some wires
 
 a 5 V relay that has both NC, NO and a low-level trigger
@@ -39,13 +43,13 @@ a 1N4007 diode
 
 Wire the components to each other as shown in [this wiring schematic](VFD_Voltage_Control_Wiring_Schematic.pdf).
 
-One quirky aspect of the wirint to note is you want the wire the Output 2 (DB 25 Pin 1) to the relay DC- **and** IN pins.
-The reason why is because when DB 25 Pin 1 goes high on the UC300ETH, the Output 2 terminal on the back of the G540
-closes to G540 PSU Ground. With a low-pass trigger, this opens the relay, which breaks the connection between X1 and 
-GND on the VFD, allowing the spindle to run.
+One quirky aspect of the wiring to note is you want the wire the Output 2 (DB 25 Pin 1) to the relay DC- **and** IN pins.
+The reason why is when DB 25 Pin 1 goes high on the UC300ETH, the Output 2 terminal on the back of the G540
+closes to G540 PSU Ground. With a low-pass trigger, this closes the relay, which creates the connection between X1 and 
+GND or X2 and GND which the VFD needs to know which direction to allow the spindle to run.
 
 If you don't wire Output 2 to both the IN pin and DC - pin, when Output 2 goes to ground when the G540 is not powered, 
-the relay will open and the VFD will run even if there is no command from UCCNC.
+the relay will close and the VFD will run even if there is no command from UCCNC.
 
 This is not what you want, so connect both the IN pin and DC - pin to the Output 2 terminal on the back of the G540.
 
@@ -80,7 +84,11 @@ Thanks to https://www.youtube.com/watch?v=D610-kN4-xc for help with the VFD para
 4. Check the checkbox next to "Spindle Relay Output Enabled" if it is not already checked.
 5. Set the M3 Relay pin to pin 1 port 2.
 6. Set the M4 Relay pin to pin 17 port 2.
-7. Click "Save" to save your changes.
+7. Make sure the charge pump setting on the back of the G540 is set to "On".
+8. Navigate to I/O Setup 1
+9. Set the Charge pump 1 pin to pin 16 port 2.
+8. Click "Save" to save your changes.
+
 
 ## 5. Done
 

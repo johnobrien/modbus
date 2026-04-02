@@ -32,6 +32,10 @@ UCCNC Version: [1.2115](/UCCNC_usersmanual.pdf)
 
 USB to RS485 Converter: [Waveshare SKU 17286](https://www.waveshare.com/wiki/USB_TO_RS485)
 
+UC300ETH with 5 LPT BOB
+
+G540 Drive
+
 Some wires
 
 a 5 V relay that has both NC, NO and a low-level trigger
@@ -42,8 +46,8 @@ a 1N4007 diode
 
 Wire the components to each other as shown in [this wiring schematic](VFD_Modbus_Wiring_Schematic.pdf).
 
-One quirky aspect of the wirint to note is you want the wire the Output 2 (DB 25 Pin 1) to the relay DC- **and** IN pins.
-The reason why is because when DB 25 Pin 1 goes high on the UC300ETH, the Output 2 terminal on the back of the G540
+One quirky aspect of the wiring to note is you want the wire the Output 2 (DB 25 Pin 1) to the relay DC- **and** IN pins.
+The reason why is when DB 25 Pin 1 goes high on the UC300ETH, the Output 2 terminal on the back of the G540
 closes to G540 PSU Ground. With a low-pass trigger, this opens the relay, which breaks the connection between X1 and 
 GND on the VFD, allowing the spindle to run.
 
@@ -167,6 +171,13 @@ Click **"Start loops"** — the button turns red when active. The loop also star
 
 ---
 
+
+### 4.6 Other UCCNC settings
+
+1. Make sure the charge pump setting on the back of the G540 is set to "On".
+2. Navigate to Settings->I/O Setup 1
+3. Set the Charge pump 1 pin to pin 16 port 2.
+4. Click "Save".
 
 ## 5. UCCNC Macros
 
